@@ -1,0 +1,1453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Class Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Class Lookup</h1>
+    <input type="text" id="search" placeholder="Enter student name" onkeyup="filterResults()">
+    <table id="results">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Class Title</th>
+            </tr>
+        </thead>
+        <tbody>
+
+    <tr>
+        <td>Thanvik Sai A.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Karthik D.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Anvith R.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Amogh J.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aayush S.</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Aadhi S.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Reyansh S.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Aaryan N.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Anvith R.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Aaryan N.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aayush S.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Abhimanyu P.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Aarman A.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aarav V.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Alekhya</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Akash</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Akash</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Krithik P</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Avyu B.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Bhargav K.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Akhil T. Senegapalli</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Aadhith A.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Advait N.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Aaryan S.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Hrihan P.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Amogh J.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Abhimanyu P.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Avi B.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Akhil T. S.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Abhimanyu U.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Arfa M.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Vihan Eppa</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vihan Eppa</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Reyansh S.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Ben O.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Gowtham P.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aryan J.</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Aarav V.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Advik D.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Arnav Govula</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Harsh C.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Bhargav Kamuju </td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aryan J.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Gowtham P</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Anshul</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Agasthya U.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Sanketh J.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Krishna S.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aran Bikkina</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Shreeyan K.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Cazlyn P.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Ishaan B.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Ashwath E.</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Abhimanyu U.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Harsh</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Arnav Kulkarni</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Avyu B.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Ishaan B.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Harshith M.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Harshith M.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Ashwath E.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Avi M.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Keerthan Jagan K.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Nishaan K.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Adhrit Bikkina</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Sriharsha R. </td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Umair M.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Siddharth B.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Avi Ballari</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Agastya U.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Rishi P.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Karthik Dev.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Ben O.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Salih</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Neekin S.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Krithik P.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Jayanth </td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Harsh C.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Jake K.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Siddarth B.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Mahir Jagtiani</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Taj</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Caleb Alu</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Samardh G.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Harshith M.</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Amogh K.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Rithvik K.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Krishna S.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Cazlyn P.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Samardh</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Samarth S.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Mohit</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Krushna P.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Raghav V.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Rihaan Polasa</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Jay Tanneeru</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Devansh</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Swarith V.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Sohan C.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Salih A.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Krushna </td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Atharv M</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Rohan M.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Nishaan K. </td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Umair M.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Yahael M.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Taj</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Samved</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Parichai</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Rishaan S.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Mithran</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Nithilan Arivarasu</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Nivedh C.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aaryan S.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Nikki </td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Bhuvan Ragupathy</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Mohit</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Divyansh P.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Suhas</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Swarith Vudutha</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Caleb A.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Rishab T.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Arav Meethale E.</td>
+        <td>Thur 3</td>
+    </tr>
+    
+    <tr>
+        <td>Shreeyan K.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Rayan A.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Rohan K.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Srujan</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Angad B.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Rithvik K.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vikranth</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Anish L.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Dhanvanth Ragupathy</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Parichai</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Ishaan S. </td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Samved</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Tejas K.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Sohan C.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Saatvik K.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Tejas</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Ryan J.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vedas J.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Samruddhi K</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Arjun B.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Rohan M.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Krishna S.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Aryavir</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Angad B.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Ryan J.</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Kaustav</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Veeransh C.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Vaibhav Ku.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Nikki </td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Aran Bikkina</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vaibhav K.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Saurya C.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Akshaj A.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Nouman K.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Saish P.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td> </td>
+        <td>Unnamed</td>
+    </tr>
+    
+    <tr>
+        <td>Saidatta</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Rishab T.</td>
+        <td>Mon 3</td>
+    </tr>
+    
+    <tr>
+        <td>Hrihan</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Arjan B.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Saurya C.</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Keerthan Jagan K.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Rohan K.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Yahael M.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Sathvik</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Adhrit Bikkina</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vikranth</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Yuvan B.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Divyansh P.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Amogh K.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Angad S.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Sriyaan P.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Saisaburi A.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Ethan W.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Anvay Shahpatel</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Mithran P.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Thanvik S.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Yuvaraj Majji</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Virat P.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Mahir Jagtiani</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Yuvaraj Majji</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Samarth C.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vihaan P.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Saidatta</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Rithvik M.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vansh J.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Sathvik</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Gunith R.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Milan Sriram</td>
+        <td>Tues 3</td>
+    </tr>
+    
+    <tr>
+        <td>Nouman K.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Aditi </td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Jay Tanneeru</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Ravish D.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Gunith R.</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Bhuvan Ragupathy</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Milan Sriram</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Sriyaan P.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Ravish D.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Krish K</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vihaan P. </td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Veeransh C.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Saatvik K.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Rishaan K.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Aryavir</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Nithilan Arivarasu</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Saisaburi A.</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Krish K</td>
+        <td>Thur 2</td>
+    </tr>
+    
+    <tr>
+        <td>Dhanvanth Ragupathy</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Arav Meethale Edathil </td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Aryan K.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Virat P.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Haasini S.</td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Yuta A.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vishrut R.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Rithvik M.</td>
+        <td>Tues 2</td>
+    </tr>
+    
+    <tr>
+        <td>Shivaan J.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Devansh</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Sahil Chitta</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Rihaan Polasa</td>
+        <td>Thur 1</td>
+    </tr>
+    
+    <tr>
+        <td>Samuel  Alexander </td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Sahil Chitta</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Advait N. </td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Kaustav</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Anmolika </td>
+        <td>Sat Fowler 2</td>
+    </tr>
+    
+    <tr>
+        <td>Avi M.</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Virat</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Srujan</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Eesha M.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Samuel Alexander </td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Rishi P.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Sriharsha R.</td>
+        <td>Sat FCS 2</td>
+    </tr>
+    
+    <tr>
+        <td>Advik D. </td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Hrihan</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Aryan K</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Alec Harris</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Vihaan S.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Ira</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Rayan A.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Anish L.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Joshnika</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Alec Harris</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Shreyan Gudimalla</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Vihaan M.</td>
+        <td>Tues 1</td>
+    </tr>
+    
+    <tr>
+        <td>Vivaan P.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Nivedh C.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Yuvan</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Suhas</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Raaga</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Vihaan M.</td>
+        <td>Sat Fowler 1</td>
+    </tr>
+    
+    <tr>
+        <td>Atharv 4th grade</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Yuta A.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Raaga C.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Samarth C.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Vansh J.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Eesha Motwani</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Vedas</td>
+        <td>Mon 2</td>
+    </tr>
+    
+    <tr>
+        <td>Narain Dusanapudi</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Raya A.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Jayanth</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Arnav Govula</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Raya A.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Jake K.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Vishrut R.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Saish P.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Arnav Kulkarni</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Atharv 4th grade</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Gurjas S.</td>
+        <td>Wed  1</td>
+    </tr>
+    
+    <tr>
+        <td>Akshaj A.</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Angad S.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Neekin S.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Aditi</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+    <tr>
+        <td>Shreyan Gudimalla</td>
+        <td>Wed  2</td>
+    </tr>
+    
+    <tr>
+        <td>Aarman S.</td>
+        <td>Wed  3</td>
+    </tr>
+    
+    <tr>
+        <td>Aarman S.</td>
+        <td>Sat FCS 1</td>
+    </tr>
+    
+    <tr>
+        <td>Gurjas S.</td>
+        <td>Sat FCS 3</td>
+    </tr>
+    
+        </tbody>
+    </table>
+    <script>
+        function filterResults() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const rows = document.querySelectorAll('#results tbody tr');
+            rows.forEach(row => {
+                const studentName = row.cells[0].textContent.toLowerCase();
+                if (studentName.includes(input)) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
